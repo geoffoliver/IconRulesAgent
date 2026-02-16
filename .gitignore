@@ -1,1 +1,76 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+## Build artifacts
+build/
+Build/
+DerivedData/
+
+## User settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xcuserstate
+
+## Workspaces and schemes
+*.xcscmblueprint
+*.xccheckout
+project.xcworkspace/xcuserdata/
+project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
+
+## Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+
+# CocoaPods (if used)
+Pods/
+
+# Carthage (if used)
+Carthage/Build/
+
+# Fastlane (if used)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Accio dependency management (if used)
+Dependencies/
+.accio/
+
+# Archives
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Coverage / Profiling
+*.xccovreport
+*.xccovarchive
+
+# Simulator logs
+*.simdevice/
+
+# SwiftLint / SwiftFormat (generated caches)
+.swiftlint.yml.lock
+.swiftformat.cache
+
+# Logs
+*.log
+
+# Misc
+*.orig
+*.rej
