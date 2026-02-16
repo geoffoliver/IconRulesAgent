@@ -1,4 +1,5 @@
 import AppKit
+import SwiftUI
 
 final class StatusBarController {
     private let statusItem: NSStatusItem
@@ -13,6 +14,12 @@ final class StatusBarController {
         }
 
         let menu = NSMenu()
+
+        let openDrop = NSMenuItem(title: "Add App…", action: #selector(showDropWindow), keyEquivalent: "d")
+        openDrop.target = self
+        menu.addItem(openDrop)
+
+        menu.addItem(NSMenuItem.separator())
 
         let openRules = NSMenuItem(title: "Open Rules Folder", action: #selector(openRulesFolder), keyEquivalent: "o")
         openRules.target = self
@@ -41,4 +48,7 @@ final class StatusBarController {
     @objc private func openLogsFolder() { service?.openLogsFolder() }
     @objc private func reloadConfig() { service?.reloadConfig() }
     @objc private func quitApp() { NSApp.terminate(nil) }
+    @objc private func showDropWindow() {
+        DropWindowController.shared.showWindow()
+    }
 }
